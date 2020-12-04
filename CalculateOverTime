@@ -1,0 +1,48 @@
+ public static void main(String[] args)
+    { 
+        String hours1;
+        String wage1;
+        double hours2,
+            wage2,
+            gross,
+            overtime,
+            federal,
+            state,
+            net;
+        double fedwh=0.0,
+               statewh=0.0;
+               overtime=0.0;
+               
+               hours1=JOptionPane.showInputDialog("Enter your weekly hours worked");
+               wage1=JOptionPane.showInputDialog("Enter your hourly wage");
+               
+               hours2 = Double.parseDouble (hours1);
+               wage2 = Double.parseDouble (wage1);
+               
+               gross = hours2*wage2;
+               overtime=gross*1.5;
+               
+               if (gross>40)
+               {
+                   JOptionPane.showMessageDialog
+                   (null, "The gross total of " + overtime + " equals " + gross +"");
+                }
+                else
+                {
+                    JOptionPane.showMessageDialog
+                    (null,"The gross total of " + hours2 + " and " + wage2 + " equals " + gross +"");
+                }
+               
+               System.exit(0);
+               
+               statewh = gross * 0.1;
+               fedwh = gross * 0.2;  
+               net = gross - fedwh - statewh;
+               
+               JOptionPane.showMessageDialog
+               (null,"The net total of " + gross + " minus " + fedwh + "minus " + statewh + " equals " + net + "");
+               
+               System.exit(0);
+               
+            }
+        }
