@@ -1,0 +1,30 @@
+/**Calculate gross income
+ * Grace Murphy
+ */
+import javax.swing.JOptionPane;
+public class Lab7_4
+{
+    public static void main ( String args [] )
+    {
+        String hours;
+        String wage;
+
+        double hours1;
+        double wage1;
+        double gross=0.0;
+        int i=0;
+
+        while (i <=3)
+        {
+            hours=JOptionPane.showInputDialog("Enter hours worked");
+            wage=JOptionPane.showInputDialog("Enter wage per hour");
+            hours1=Double.parseDouble(hours);
+            wage1=Double.parseDouble(wage);
+
+            gross=hours1 * wage1;
+        }
+
+        System.out.print(""+gross+"");
+        System.exit(0);
+    }
+}
