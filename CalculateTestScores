@@ -1,0 +1,26 @@
+/**
+ * Grace Murphy
+ * Lab7_2
+ */
+import javax.swing.JOptionPane;
+public class Lab7_2
+{
+    public static void main (String args [] )
+    { 
+        String num;
+        
+        double num1;
+        double average1=0.0;
+        double sum=0.0;
+        int i=0;
+        
+        while (i<=5)
+    {
+        num=JOptionPane.showInputDialog("Enter 5 test scores, 0-100 range");
+        num1=Double.parseDouble(num);
+    }
+    average1=sum / 5;
+    System.out.print(""+average1+"");
+    System.exit(0);
+}
+}
